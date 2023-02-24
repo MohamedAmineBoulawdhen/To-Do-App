@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# ToDo Application with Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project, I will be building a ToDo application using Redux to manage the global state.I will the chef principle of this project and it can be expanded as needed.
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+I will need to create the following components:
 
-### `npm start`
+- `AddTask`: A component that allows the user to add a new task.
+- `ListTask`: A component that displays the list of tasks.
+- `Task`: A component that represents an individual task.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each task will have the following attributes:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `id`: A unique identifier for the task.
+- `description`: A string that describes the task.
+- `isDone`: A boolean that indicates whether the task has been completed or not.
 
-### `npm test`
+## Functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The user should be able to perform the following actions:
 
-### `npm run build`
+- Add a new task: The `AddTask` component should allow the user to enter a description for a new task and add it to the list of tasks.
+- Filter tasks: The `ListTask` component should allow the user to filter the list of tasks by whether they are done or not.
+- Edit a task: The `Task` component should allow the user to edit the description of a task.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I will be using Redux to manage the global state of the application. Specifically, I will create the following Redux components:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `store`: A Redux store that holds the global state of the application.
+- `actions`: Redux actions that define the possible changes to the state.
+- `reducers`: Redux reducers that implement the logic for the state changes.
 
-### `npm run eject`
+I will also use React-Redux to connect my React components to the Redux store.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Create a new React application using `create-react-app`.
+2. Install the following dependencies: npm install redux react-redux react.
+3. Create the Redux components (`store`, `actions`, `reducers`).
+4. Create the React components (`AddTask`, `ListTask`, `Task`).
+5. Use `react-redux` to connect the React components to the Redux store.
+6. Implement the functionality (adding, filtering, editing tasks).
+7. Style the application as desired.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Conclusion
 
-## Learn More
+In this project, I have built a ToDo application using Redux to manage the global state. I have created Redux components for the store, actions, and reducers, and used React-Redux to connect my React components to the Redux store. I have implemented the functionality to add, filter, and edit tasks, and styled the application as desired.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
