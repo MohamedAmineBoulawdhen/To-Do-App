@@ -18,7 +18,7 @@ const Sidebar = () => {
   return (
     <>
       <nav className="sidebar">
-        <h1>To Do</h1>
+        <h1>ToDo</h1>
         <hr />
         <ul>
           {" "}
