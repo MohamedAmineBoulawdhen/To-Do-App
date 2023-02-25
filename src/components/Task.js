@@ -45,7 +45,7 @@ export default function Task({ id, title, description }) {
             </button>
             {title}
           </h1>
-          <p id="taskdescription">
+          <div id="taskdescription">
             <strong>Description: </strong>
             {description ? (
               description
@@ -61,7 +61,7 @@ export default function Task({ id, title, description }) {
                 </center>
               </div>
             )}{" "}
-          </p>
+          </div>
         </>
       )}
     </div>
