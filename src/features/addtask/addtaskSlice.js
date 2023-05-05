@@ -1,8 +1,13 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-const initialState = [
+let initialState = [
   { id: 0, title: "Project1", description: "first project", isDone: true },
   { id: 1, title: "Project2", description: "second project", isDone: false },
 ];
+if (!localStorage.getItem("initialState")){
+  localStorage.setItem("initialState",JSON.stringify(initialState));
+}else{
+initialState=JSON.parse(localStorage.getItem('initialState'));
+}
 const tasksSlice = createSlice({
   name: "tasks",
   initialState,
@@ -10,6 +15,7 @@ const tasksSlice = createSlice({
     taskadded: {
       reducer(state, action) {
         state.push(action.payload);
+        localStorage.setItem("initialState",JSON.stringify(state))
       },
       prepare(title) {
         return {
